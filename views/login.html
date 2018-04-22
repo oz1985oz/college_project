@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style>
+		.form-group {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.form-horizontal {
+			padding: 1rem;
+		}
+		.text-danger {
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="/college">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzA_TF56D88Y5xyqEVuvFK9F1CIJjmweWNzbk7c_IvIk-LPmlsTQ" height="80" alt="logo">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		</nav>
+	</header>
+	<strong><p class="text-danger">{{error}}</p></strong>
+	{% for error in errorsValidate %}
+	<strong><p class="text-danger">{{error}}</p></strong><br>
+	{% endfor %}
+	<form action="/college/check-login" method="POST" class="form-horizontal">
+	  <div class="form-group">
+	    <label for="inputEmail3" class="col-sm-1 control-label">Email</label>
+	    <div class="col-sm-4">
+	      <input type="email" name="username" class="form-control" id="inputEmail3" placeholder="Email">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label for="inputPassword3" class="col-sm-1 control-label">Password</label>
+	    <div class="col-sm-4">
+	      <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="Password">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <div id="login" class="col-sm-offset-2 col-sm-5">
+	      <button type="submit" class="btn btn-default float-right">Sign in</button>
+	    </div>
+	  </div>
+	</form>
+</body>
+</html>

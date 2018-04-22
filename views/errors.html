@@ -1,0 +1,14 @@
+{% include 'header.html' %}
+
+	<h1>There is some errors:</h1>
+	<ul>
+
+	{% for errors in errorsValidates %}
+	{% for error in errors %}
+	<li><strong><p class="text-danger">{{error}}</p></strong></li>
+	{% endfor %}
+	{% endfor %}
+
+	</ul>
+</body>
+</html>

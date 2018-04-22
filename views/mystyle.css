@@ -1,0 +1,67 @@
+/* mystyles.css */
+body, .card {
+	background-color:  #F0F0F0;
+}
+.card {
+	margin: .08rem;
+}
+#students_list {
+	background-color: #ddd;
+	margin-bottom: .75rem;
+	border-right: 1px solid #fff;
+}
+#courses_list {
+	background-color: #E0E0E0;
+	margin-bottom: .75rem;
+}
+#administrators_list {
+	background-color: rgba(255, 255, 128, .5);
+}
+.pics {
+	width: 5.2rem;
+	height: 5.2rem;
+	object-fit:scale-down;
+	overflow: hidden;
+}
+#main_container {
+	border: 1px solid #333;
+}
+#right {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+span.user {
+	padding: 0 1rem;
+}
+#all_info {
+	width: 100%;
+	padding: 0.5rem;
+}
+.text-box {
+	padding: 0.5rem;
+}
+.student-info, .course-info, .administrator-info {
+	display: flex;
+}
+.right-text {
+	display: block;
+	width: 35rem;
+	text-align: left;
+	padding-left: 1rem;
+}
+.top-inside, .top-side {
+	display: flex;
+	padding-top: 0.5rem;
+	justify-content: space-between;
+	align-items: center;
+}
+.top-side {
+	border-bottom: 1px solid #333;
+	padding-bottom: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+.top-side>a>button {
+	font-size: 1.1rem;
+	font-weight: bolder;
+}

@@ -1,0 +1,46 @@
+{% include 'header.html' %}
+
+	<main id="all_info" class="row">
+		<nav id="students_list" class="col-sm-2">
+			<div class="top-side">
+				<h3>Students</h3>
+				<a href="/college/student/new"><i class="far fa-plus-square" style="font-size: 2rem; color: #333"></i></a>
+			</div>
+			{% for student in students %}
+			<div class="card">
+				<a href="/college/student/{{student.id}}">
+					<div class="student-info">
+						<div>
+							<img src="/views/{{student.image_link}}" alt="{{student.name}}" class="pics">
+						</div>
+						<div class="right-text">
+							<p>{{student.name}}</p>
+							<p>{{student.phone}}</p>
+						</div>
+
+					</div>
+				</a>
+			</div>
+			{% endfor %}
+	
+		</nav>
+		<nav id="courses_list" class="col-sm-3">
+			<div class="top-side">
+				<h3>Courses</h3>
+				<a href="/college/course/new"><i class="far fa-plus-square" style="font-size: 2rem; color: #333"></i></a>
+			</div>
+			{% for course in courses %}
+			<div class="card">
+				<a href="/college/course/{{course.id}}">
+					<div class="course-info">
+						<div>
+							<img src="/views/{{course.image_link}}" alt="{{course.name}}" class="pics">
+						</div>
+						<div class="right-text">
+				    		<p>{{course.name}}</p>
+				    	</div>
+				    </div>
+			    </a>
+		    </div>
+			{% endfor %}
+		</nav>

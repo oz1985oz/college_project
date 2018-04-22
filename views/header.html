@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>College</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+	<style>
+		body, .card {
+			background-color:  #F0F0F0;
+		}
+		.card {
+			margin: .08rem;
+		}
+		#students_list {
+			background-color: #ddd;
+			margin-bottom: .75rem;
+			border-right: 1px solid #fff;
+		}
+		#courses_list {
+			background-color: #E0E0E0;
+			margin-bottom: .75rem;
+		}
+		#administrators_list {
+			background-color: rgba(255, 255, 128, .5);
+			/*margin-right: 0.8rem;*/
+		}
+		.pics {
+			width: 5.2rem;
+			height: 5.2rem;
+			object-fit:scale-down;
+			overflow: hidden;
+			/*border-radius: 50% 50%;*/
+		}
+		#main_container {
+			border: 1px solid #333;
+		}
+		#right {
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+		}
+		span.user {
+			padding: 0 1rem;
+		}
+		#all_info {
+			width: 100%;
+			padding: 0.5rem;
+		}
+		.text-box {
+			padding: 0.5rem;
+		}
+		.student-info, .course-info, .administrator-info {
+			display: flex;
+		}
+		.right-text {
+			display: block;
+			width: 35rem;
+			text-align: left;
+			padding-left: 1rem;
+		}
+		.top-inside, .top-side {
+			display: flex;
+			padding-top: 0.5rem;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.top-side {
+			border-bottom: 1px solid #333;
+			padding-bottom: 0.5rem;
+			margin-bottom: 0.5rem;
+		}
+		.top-side>a>button {
+			font-size: 1.1rem;
+			font-weight: bolder;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="/college">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzA_TF56D88Y5xyqEVuvFK9F1CIJjmweWNzbk7c_IvIk-LPmlsTQ" height="80" alt="logo">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+				    	<a class="navbar-brand" href="/college"><h4>School</h4></a>
+				  	</li>
+				  	{% if admin.role_id == 1 or admin.role_id == 2 %}
+				  	<li class="nav-item active">
+				    	<a class="navbar-brand" href="/college/administrator"><h4>Administration</h4></a>
+				  	</li>
+				  	{% endif %}
+				</ul>
+				<div id="right">
+					<span class="user">
+						<span><strong>{{admin.name}}, {{admin.role}}</strong></span><br>	
+						<a href="/college/logout">logout</a>
+					</span>
+					<img src="/views/{{admin.image_link}}" alt="{{admin.name}}" width=65>
+				</div>
+			</div>
+		</nav>
+	</header>
