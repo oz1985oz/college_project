@@ -48,7 +48,7 @@ INSERT INTO `administrators` (`id`, `role_id`, `name`, `phone`, `email`, `passwo
 (23, 1, 'Niv', '0501111111', 'nivus@gmail.com', '$2y$10$7XBxxny.zdlYqIhyooaq9uaTBOzb8TSDqQAuu.qvLyXKoQpT7wvZq', 'IMG\\administrators\\Niv.png'),
 (24, 3, 'Spiderman', '0544775693', 'spider62@gmail.com', '$2y$10$JSECFYZb/O3N6b/9In7AmuWzBq8h7fZtAqJ2D5qURvfJ10hFrGpgq', 'IMG\\administrators\\Spiderman.jpg'),
 (25, 2, 'Calimero', '0586546587', 'calimeroegg@gmail.com', '$2y$10$p9iDTNC676X3tMQkBPRu.OTVnqKhlpO2yQg/UH4OnuARYtwksjfH.', 'IMG\\administrators\\Calimero.jpg'),
-(26, 2, 'Rina', '0584657327', 'rina1970@gmail.com', 'rina1234', 'IMG\\administrators\\Rina.png');
+(26, 2, 'Rina', '0584657327', 'rina1970@gmail.com', '$2y$10$14f.lUa2RZ0Onc6M/tYJUOLWngF.oZcCvze57fU6Qkr2ktXm5J94m', 'IMG\\administrators\\Rina.png');
 
 -- --------------------------------------------------------
 
